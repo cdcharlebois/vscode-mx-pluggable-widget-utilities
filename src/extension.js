@@ -22,14 +22,14 @@ function activate(context) {
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with  registerCommand
   // The commandId parameter must match the command field in package.json
-  let disposable = vscode.commands.registerCommand(
-    "mendix-pluggable-widget-utilities.helloWorld",
-    function () {
-      vscode.window.showInformationMessage(
-        "Hello World from mendix-pluggable-widget-utilities!"
-      );
-    }
-  );
+  // let disposable = vscode.commands.registerCommand(
+  //   "mendix-pluggable-widget-utilities.helloWorld",
+  //   function () {
+  //     vscode.window.showInformationMessage(
+  //       "Hello World from mendix-pluggable-widget-utilities!"
+  //     );
+  //   }
+  // );
   const filter = ["javascript", "javascriptreact"].map((name) => ({
     language: name,
     scheme: "file",
@@ -40,7 +40,6 @@ function activate(context) {
   context.subscriptions.push(
     Languages.registerDefinitionProvider(filter, new PeekProvider())
   );
-  context.subscriptions.push(disposable);
 }
 exports.activate = activate;
 
