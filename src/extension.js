@@ -1,8 +1,10 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require("vscode");
+const HoverProvider = require("./HoverProvider");
+const PeekProvider = require("./PeekProvider");
 // vscode.languages;
-const { languages: Languages, Hover } = vscode;
+const { languages: Languages } = vscode;
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -28,21 +30,16 @@ function activate(context) {
       );
     }
   );
-  Languages.registerHoverProvider("javascript", {
-    provideHover(document, position, token) {
-      const range = document.getWordRangeAtPosition(position);
-      const word = document.getText(range);
-
-      if (word == "hello") {
-        return new Hover(
-          new vscode.MarkdownString("").appendCodeblock(
-            "console.log('hi there')",
-            "javascript"
-          )
-        );
-      }
-    },
-  });
+  const filter = ["javascript", "javascriptreact"].map((name) => ({
+    language: name,
+    scheme: "file",
+  }));
+  context.subscriptions.push(
+    Languages.registerHoverProvider(filter, new HoverProvider())
+  );
+  context.subscriptions.push(
+    Languages.registerDefinitionProvider(filter, new PeekProvider())
+  );
   context.subscriptions.push(disposable);
 }
 exports.activate = activate;
