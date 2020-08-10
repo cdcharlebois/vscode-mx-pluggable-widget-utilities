@@ -4,6 +4,9 @@
   "description": "",
   "version": "0.1.0",
   "publisher": "ConnerCharlebois",
+  "repository": {
+    "url": "https://github.com/cdcharlebois/vscode-mx-pluggable-widget-utilities"
+  },
   "engines": {
     "vscode": "^1.47.0"
   },
