@@ -1,35 +1,34 @@
-# mendix-pluggable-widget-utilities README
+# mendix-pluggable-widget-utilities
 
-This is the README for your extension "mendix-pluggable-widget-utilities". After writing up a brief description, we recommend including the following sections.
+⚡️ A VS Code extension to supercharge your pluggable widget development flow.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+✂ Pluggable widget properties snippets with handy default names and placeholders
 
-For example if there is an image subfolder under your extension project workspace:
+![image-20200810113756818](README.assets/image-20200810113756818.png
 
-\!\[feature X\]\(images/feature-x.png\)
+![bsE9WS6ybP](README.assets/bsE9WS6ybP.gif)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+👀Peek to definitions of widget properties from your JSX
+
+![r1w5tsXVef](README.assets/r1w5tsXVef.gif)
+
+🔐View widget properties type definitions on hover--no need to visit the docs pages.
+
+![F0NUkpaVaO](README.assets/F0NUkpaVaO.gif)
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+VS Code ^1.47.0
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+- None
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+* None
 
 ## Release Notes
 
@@ -37,29 +36,9 @@ Users appreciate release notes as you update your extension.
 
 ### 1.0.0
 
-Initial release of ...
+Initial release
 
-### 1.0.1
+## Contribution
 
-Fixed issue #.
+Now acepting issues and pull requests: https://github.com/cdcharlebois/vscode-mx-pluggable-widget-utilities/issues
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
