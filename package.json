@@ -2,7 +2,7 @@
   "name": "mendix-pluggable-widget-utilities",
   "displayName": "mendix-pluggable-widget-utilities",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "ConnerCharlebois",
   "engines": {
     "vscode": "^1.47.0"
