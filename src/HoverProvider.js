@@ -2,7 +2,7 @@
 const vscode = require("vscode");
 const Utils = require("./fs-utils");
 const PropertyTypes = require("./PropertyTypes");
-const { Hover, Location, Uri, Position } = vscode;
+const { Hover } = vscode;
 module.exports = class HoverProvider {
   constructor() {}
   searchFilePath() {

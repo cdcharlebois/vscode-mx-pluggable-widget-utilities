@@ -1,6 +1,4 @@
 "use strict";
-const vscode = require("vscode");
-const fs = require("fs");
 const Utils = require("./fs-utils");
 module.exports = class PeekProvider {
   async provideDefinition(document, position, token) {
