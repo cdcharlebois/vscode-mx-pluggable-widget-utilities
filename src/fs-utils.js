@@ -2,12 +2,18 @@ const vscode = require("vscode");
 const { Location, Position, Uri } = vscode;
 const fs = require("fs");
 const xml2js = require("xml2js");
-const getWidgetPropsFiles = async () => {
+const getWidgetPropsFile = async () => {
   const xmlGlob = `**/src/*.xml`;
-  return vscode.workspace.findFiles(xmlGlob, `**/package.xml`);
+  return (await vscode.workspace.findFiles(xmlGlob, `**/package.xml`))[0];
 };
 
+/**
+ *
+ * @param {String} propName - the name of the prop to search for
+ * @param {String} filePath - the path to the properties file.
+ */
 const getLocationsOfPropertyInFile = async (propName, filePath) => {
+  const searchText = `key="${propName}"`;
   let ret = [];
   // find instance in the file
   const lines2 = await _getLinesFromFile(filePath);
@@ -15,11 +21,11 @@ const getLocationsOfPropertyInFile = async (propName, filePath) => {
   // const file = fs.readFileSync(filePath, "utf-8");
   // const lines = file.split(/\r?\n/);
   lines2.forEach((line, index) => {
-    if (line.indexOf(propName) > -1) {
+    if (line.indexOf(searchText) > -1) {
       ret.push(
         new Location(
           Uri.file(filePath),
-          new Position(index, line.indexOf(propName))
+          new Position(index, line.indexOf(searchText))
         )
       );
     }
@@ -46,7 +52,7 @@ const getWidgetPropertyTypeFromName = async (propName, filePath) => {
   }
 };
 module.exports = {
-  getWidgetPropsFiles,
+  getWidgetPropsFile,
   getLocationsOfPropertyInFile,
   getWidgetPropertyTypeFromName,
 };
