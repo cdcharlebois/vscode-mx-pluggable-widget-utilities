@@ -16,10 +16,10 @@
   ],
   "main": "./src/extension.js",
   "contributes": {
-    "commands": [
+    "snippets": [
       {
-        "command": "mendix-pluggable-widget-utilities.helloWorld",
-        "title": "Hello World"
+        "language": "xml",
+        "path": "./snippets/xml.json"
       }
     ]
   },

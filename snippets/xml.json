@@ -1,0 +1,186 @@
+{
+  "Pluggable Property Group": {
+    "prefix": "pprop-group",
+    "body": [
+      "<propertyGroup caption=\"${1|General,Behavior,Data Source,Appearance|}\">",
+      "</propertyGroup>"
+    ]
+  },
+  "Pluggable Property String": {
+    "prefix": "pprop-string",
+    "body": [
+      "<property key=\"${1:string}\" type=\"string\" required=\"${4|false,true|}\" multiline=\"${5|false,true|}\">",
+      "  <caption>${2:String}</caption>",
+      "  <description>${3}</description>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Boolean": {
+    "prefix": "pprop-boolean",
+    "body": [
+      "<property key=\"${1:boolean}\" type=\"boolean\" defaultValue=\"${4|false,true|}\">",
+      "  <caption>${2:Boolean}</caption>",
+      "  <description>${3}</description>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Integer": {
+    "prefix": "pprop-int",
+    "body": [
+      "<property key=\"${1:integer}\" type=\"integer\" defaultValue=\"1\" required=\"${4|false,true|}\">",
+      " <caption>${2:Number}</caption>",
+      "  <description>${3}</description>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Decimal": {
+    "prefix": "pprop-decimal",
+    "body": [
+      "<property key=\"${1:decimal}\" type=\"decimal\" defaultValue=\"1.0\" required=\"${4|false,true|}\">",
+      " <caption>${2:Decimal}</caption>",
+      "  <description>${3}</description>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Enum": {
+    "prefix": "pprop-enum",
+    "body": [
+      "<property key=\"${1:enumeration}\" type=\"enumeration\" defaultValue=\"${5}\" required=\"${6|false,true|}\">",
+      "  <caption>${2:Enumeration}</caption>",
+      "  <description>${3}</description>",
+      "  <enumerationValues>",
+      "    <enumerationValue key=\"${5:key}\">${4:Caption}</enumerationValue>",
+      "  </enumerationValues>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Icon": {
+    "prefix": "pprop-icon",
+    "body": [
+      "<property key=\"${1:icon}\" type=\"icon\" required=\"${4|false,true|}\">",
+      "  <caption>${2:Icon}</caption>",
+      "  <description>${3}</description>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Image": {
+    "prefix": "pprop-image",
+    "body": [
+      "<property key=\"${1:image}\" type=\"image\" required=\"${4|false,true|}\">",
+      "  <caption>${2:Image}</caption>",
+      "  <description>${3}</description>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Content": {
+    "prefix": "pprop-content",
+    "body": [
+      "<property key=\"${1:content}\" type=\"widgets\" required=\"${4|false,true|}\" dataSource=\"${5:datasource}\">",
+      "  <caption>${2:Content}</caption>",
+      "  <description>${3}</description>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Expression": {
+    "prefix": "pprop-expression",
+    "body": [
+      "<property key=\"${1:expression}\" type=\"expression\" defaultValue=\"${5}\">",
+      "  <caption>${2:Expression}</caption>",
+      "  <description>${3: What does it mean?}</description>",
+      "  <returnType type=\"${4|Boolean,DateTime,Decimal,Integer,String|}\" />",
+      "</property>"
+    ]
+  },
+  "Pluggable Property TextTemplate": {
+    "prefix": "pprop-text-template",
+    "body": [
+      "<property key=\"${1:textTemplate}\" type=\"textTemplate\" required=\"${4|false,true|}\" multiline=\"${5|false,true|}\">",
+      "  <caption>${2:Text Template}</caption>",
+      "  <description>${3}</description>",
+      "  <translations>",
+      "    <translation lang=\"en_US\">${6:defaultValue}</translation>",
+      "  </translations>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Action": {
+    "prefix": "pprop-action",
+    "body": [
+      "<property key=\"${1:action}\" type=\"action\">",
+      "  <caption>${2:Action}</caption>",
+      "  <description>${3}</description>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Attribute": {
+    "prefix": "pprop-attr",
+    "body": [
+      "<property key=\"${1:attribute}\" type=\"attribute\" required=\"${4|false,true|}\" onChange=\"${5:action}\">",
+      "  <caption>${2:Attribute}</caption>",
+      "  <description>${3}</description>",
+      "  <attributeTypes>",
+      "    <attributeType name=\"String\" />",
+      "    <attributeType name=\"Binary\" />",
+      "    <attributeType name=\"Boolean\" />",
+      "    <attributeType name=\"DateTime\" />",
+      "    <attributeType name=\"Decimal\" />",
+      "    <attributeType name=\"Enum\" />",
+      "    <attributeType name=\"HashString\" />",
+      "    <attributeType name=\"Integer\" />",
+      "    <attributeType name=\"Long\" />",
+      "    <attributeType name=\"AutoNumber\" />",
+      "  </attributeTypes>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Object": {
+    "prefix": "pprop-obj",
+    "body": [
+      "<property key=\"${1:object}\" type=\"object\" isList=\"${4|true,false|}\" required=\"${5|false,true|}\">",
+      "  <caption>${2:Object}</caption>",
+      "  <description>${3}</description>",
+      "  <properties>",
+      "  $0",
+      "  </properties>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property File": {
+    "prefix": "pprop-file",
+    "body": [
+      "<property key=\"${1:file}\" type=\"file\" required=\"${4|false, true|}\">",
+      "  <caption>${2:File}</caption>",
+      "  <description>${3}</description>",
+      "</property>"
+    ]
+  },
+  "Pluggable Property Datasource": {
+    "prefix": "pprop-datasource",
+    "body": [
+      "<property key=\"${1:datasource}\" type=\"datasource\" required=\"${4|true,false|}\" isList=\"true\">",
+      "  <caption>${2:Data Source}</caption>",
+      "  <description>${3}</description>",
+      "</property>"
+    ]
+  },
+  "System Property Label": {
+    "prefix": "sprop-label",
+    "body": "<systemProperty key=\"Label\"/>"
+  },
+  "System Property Name": {
+    "prefix": "sprop-name",
+    "body": "<systemProperty key=\"Name\"/>"
+  },
+  "System Property TabIndex": {
+    "prefix": "sprop-tab-index",
+    "body": "<systemProperty key=\"TabIndex\"/>"
+  },
+  "System Property Visibility": {
+    "prefix": "sprop-visibility",
+    "body": "<systemProperty key=\"Visibility\"/>"
+  },
+  "System Property Editability": {
+    "prefix": "sprop-editability",
+    "body": "<systemProperty key=\"Editability\"/>"
+  }
+}
