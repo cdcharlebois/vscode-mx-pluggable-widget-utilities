@@ -13,6 +13,5 @@ module.exports = class PeekProvider {
       searchText,
       propFiles[0].path
     );
-    // });
   }
 };
