@@ -6,8 +6,6 @@
 
 ✂ Pluggable widget properties snippets with handy default names and placeholders
 
-![image-20200810113756818](README.assets/image-20200810113756818.png
-
 ![bsE9WS6ybP](README.assets/bsE9WS6ybP.gif)
 
 👀Peek to definitions of widget properties from your JSX
